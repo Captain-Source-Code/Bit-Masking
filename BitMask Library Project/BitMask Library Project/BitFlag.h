@@ -19,7 +19,7 @@
 #include <type_traits>
 
 //Put this in headers!
-#define BITFLAG(flatSet)\
+#define BITFLAG(flagSet)\
 /*Arithmetic Operators*/\
 flagSet operator~(const flagSet& a);\
 \
