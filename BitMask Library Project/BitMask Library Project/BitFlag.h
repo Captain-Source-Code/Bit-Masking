@@ -18,7 +18,33 @@
 
 #include <type_traits>
 
-#define BITFLAG(flagSet)\
+//Put this in headers!
+#define BITFLAG(flatSet)\
+/*Arithmetic Operators*/\
+flagSet operator~(const flagSet& a);\
+\
+flagSet operator&(const flagSet& a, const flagSet& b);\
+\
+flagSet operator|(const flagSet& a, const flagSet& b);\
+\
+flagSet operator^(const flagSet& a, const flagSet& b);\
+\
+flagSet operator<<(const flagSet& a, const flagSet& b);\
+\
+flagSet operator>>(const flagSet& a, const flagSet& b);\
+/*Assignment Operators*/\
+flagSet operator&=(flagSet& a, const flagSet& b);\
+\
+flagSet operator|=(flagSet& a, const flagSet& b);\
+\
+flagSet operator^=(flagSet& a, const flagSet& b);\
+\
+flagSet operator<<=(flagSet& a, const flagSet& b);\
+\
+flagSet operator>>=(flagSet& a, const flagSet& b);\
+
+//This belongs in definitions!
+#define BITFLAG_DEF(flagSet)\
 \
 typedef std::underlying_type_t<flagSet> bit;\
 /*Arithmetic Operators*/\
