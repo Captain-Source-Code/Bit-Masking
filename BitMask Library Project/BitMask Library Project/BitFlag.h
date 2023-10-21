@@ -33,15 +33,15 @@ flagSet operator<<(const flagSet& a, const flagSet& b);\
 \
 flagSet operator>>(const flagSet& a, const flagSet& b);\
 /*Assignment Operators*/\
-flagSet operator&=(flagSet& a, const flagSet& b);\
+flagSet& operator&=(flagSet& a, const flagSet& b);\
 \
-flagSet operator|=(flagSet& a, const flagSet& b);\
+flagSet& operator|=(flagSet& a, const flagSet& b);\
 \
-flagSet operator^=(flagSet& a, const flagSet& b);\
+flagSet& operator^=(flagSet& a, const flagSet& b);\
 \
-flagSet operator<<=(flagSet& a, const flagSet& b);\
+flagSet& operator<<=(flagSet& a, const flagSet& b);\
 \
-flagSet operator>>=(flagSet& a, const flagSet& b);\
+flagSet& operator>>=(flagSet& a, const flagSet& b);\
 
 //This belongs in definitions!
 #define BITFLAG_DEF(flagSet)\
