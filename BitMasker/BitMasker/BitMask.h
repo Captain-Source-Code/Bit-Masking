@@ -31,7 +31,7 @@ extern flagSet& operator<<=(flagSet& a, const flagSet& b);\
 extern flagSet& operator>>=(flagSet& a, const flagSet& b);\
 
 //Place this within the cpp file, again, preferably wrapped in the same namespace the enum is.
-#define BITFLAG_DEF \
+#define BITFLAG_DEF(flagSet) \
 flagSet operator~(const flagSet& a)\
 {\
 	flagSet b = flagSet(~bit(a));\
